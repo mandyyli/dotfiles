@@ -1,0 +1,86 @@
+! all
+*.background: #1f1f1f
+*.foreground: #c0b18b
+*.cursorColor:#c5c8c6
+
+! Normal
+! ! color0    black
+! ! color1    red
+! ! color2    green
+! ! color3    yellow
+! ! color4    blue
+! ! color5    purple
+! ! color6    cyan
+! ! color7    white
+!
+
+!black
+*color0:#4A3637
+*color8:#4A3637
+
+!red
+*color1:#d17b49
+*color9:#d17b49
+
+!green
+*color2:#7b8748
+*color10:#7b8748
+
+!yellow
+*color3:#af865a
+*color11:#af865a
+
+!blue
+*color4:#535C5C
+*color12:#535C5C
+
+!magenta
+*color5:#775759
+*color13:#775759
+
+!cyan
+*color6:#6d715e
+*color14:#6d715e
+
+!white
+*color7:#c0b18b
+*color15:#c0b18b
+
+
+URxvt*buffered: true
+URxvt*cursorBlink: true
+URxvt*underlineColor: #535C5C
+URxvt*font:  xft:terminus:size=12
+URxvt*borderless: 1
+URxvt*scrollBar: false
+URxvt*loginShell: true
+Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
+URxvt*saveLines: 5000
+URxvt*termName: rxvt-unicode
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 2
+
+URxvt*background:   [50]#1D1D1D
+URxvt.colorIT:      #87af5f
+URxvt.colorBD:      #867e36
+URxvt.colorUL:      #535C5C
+URxvt*depth: 32
+URxvt.internalBorder:  10
+
+!-- Xft settings -- !
+
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.autohint: 0
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+Xft.dpi: 110
+
+urxvt.perl-ext-common: default,resize-font 
+URxvt.keysym.C-j:     resize-font:smaller 
+URxvt.keysym.C-k:      resize-font:bigger 
+URxvt.keysym.C-=:     resize-font:reset
+
+
