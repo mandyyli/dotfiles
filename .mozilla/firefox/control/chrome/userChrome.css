@@ -1,0 +1,23 @@
+@import "config.css";
+@import "variables.css";
+@import "icons/icons.css";
+@import "urlbar/urlbar.css";
+@import "navbar/navbar.css";
+/*
+@import "popup/popup.css";
+*/
+@import "interface/interface.css";
+@import "userChrome-tabline.css";
+
+/* Hover and Active states to mimic other buttons */
+#back-button:hover:not([disabled]) > .toolbarbutton-icon {
+background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+#back-button:active:not([disabled]) > .toolbarbutton-icon {
+background-color: var(--toolbarbutton-active-background) !important;
+}
+
+#tracking-protection-icon-box {
+    display: none !important;
+}

@@ -1,0 +1,9 @@
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+       body {
+           background-color: #1a1b26 !important;
+       }
+   }
+  
+@-moz-document url-prefix(about:blank), url-prefix(about:preferences), url-prefix(about:profiles), url-prefix(about:config) {
+	*{background-color:#1a1b26 !important;}
+}

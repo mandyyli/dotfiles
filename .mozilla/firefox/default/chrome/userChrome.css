@@ -1,0 +1,138 @@
+#browser { margin-top: -1px !important; }
+
+toolbarbutton#appmenu-toolbar-button,
+toolbarbutton#alltabs-button,
+toolbarbutton#new-tab-button,
+.tab-icon-image,
+.tabs-closebutton-box,
+.tabs-border-bottom,
+.tab-close-button {
+	display: none !important;
+}
+
+
+/* Hide the new curved tab edges */
+.tab-background {
+	color: #16161e !important;
+	background-color: #16161e !important;
+    /*opacity: 0 !important; */ /* this also hides container highlights*/
+}
+
+tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
+	-moz-appearance: none !important;
+	border-radius: 0px !important; 
+	border: none !important;
+	border-bottom: 0px none !important;
+	background-image: none !important;
+	margin-top: 0px !important;       
+}
+tabs#tabbrowser-tabs {
+	background: #1f1f1f !important;
+	padding-top: 0px !important;
+	margin-left: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	border-bottom: 0px none !important;
+	text-align: center !important;
+	/*box-shadow: inset 0px -4px 2px rgba(0,0,0,0.1) !important;*/
+}
+
+.tabbrowser-tab {
+	//max-height: 20px !important;
+	//margin-left: 0px !important;
+	padding-top: 2px !important;
+	color: #787c99 !important;
+	border-bottom: 0px none !important;
+	background: #16161e !important;
+	/*box-shadow: inset 0px -4px 2px rgba(0,0,0,0.1) !important;*/
+}
+
+.tabbrowser-tab[selected=true] {
+	color: #f7768e !important;
+	/*color: #a9b1d6 !important; */
+	background: #16161e !important;
+	border-bottom: 0px none !important;
+	box-shadow: none !important;
+}
+
+.tabbrowser-tab:not([selected]):hover {
+color: white !important; 
+}
+
+.tabbrowser-tab .tab-text {
+	margin-left: 3px !important;
+	margin-right: 3px !important;
+	margin-top: 2px !important;
+	font-size: 12px !important;
+	font-family: Droid Sans !important;
+	/*font-family: Dweep !important; */
+}
+
+/* Hide the little graphic separator between inactive tabs */
+.tabbrowser-tab:before,
+.tabbrowser-tab:after {
+    visibility: hidden !important;
+}
+
+html {
+	overflow: hidden;
+}
+
+#urlbar dropmarker,
+#identity-box,
+#star-button,
+#go-button,
+.tab-throbber,
+.tabs-newtab-button,
+.tab-throbber[progress] {
+	display: none !important;
+}
+
+
+.titlebar-placeholder[type="caption-buttons"] {
+	margin-left: 10px !important;
+}
+
+.tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
+	min-width: 30px !important;
+	max-width: 130px !important;
+}
+
+    
+/* removes line between navigation bar and tabs */
+#navigator-toolbox { --tabs-border-color: transparent !important; }
+
+#nav-bar {
+	background-image: none !important;
+	background-color: #1c1c1c !important;
+	border: none !important;
+	margin-bottom: 0 !important;
+	padding: 10 !important;
+}
+
+#urlbar {font-size: 11pt !important}
+#urlbar-input-container {color: white !important;}
+
+#statusbar-display { display: none !important; }
+
+
+
+/* This should hide tabs scrollbuttons in a manner that preserves the ability to move tab strip when reordering tabs */
+
+#tabbrowser-tabs:not([movingtab]){ --uc-scroll-visibility: hidden }
+#tabbrowser-tabs[overflow]{ --uc-scrollbox-margin: -28px }
+
+#scrollbutton-up{ position: relative;z-index: 1 }
+
+#scrollbutton-up,
+#scrollbutton-down,
+#scrollbutton-up ~ spacer{
+  visibility: var(--uc-scroll-visibility,visible);
+}
+.scrollbox-clip{ margin-inline: var(--uc-scrollbox-margin,0); }
+#tabbrowser-tabs[overflow][positionpinnedtabs] .tabbrowser-tab[pinned]{
+  border-left: 28px solid transparent !important;
+  clip-path: padding-box
+}
+
+
