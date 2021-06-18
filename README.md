@@ -46,3 +46,5 @@ git clone https://github.com/wbthomason/packer.nvim\
  ```
 - Copy `init.lua` and `lua` to `~/.config/nvim`
 - Open `nvim` and run `:PackerInstall`
+- Install language servers using the lspconfig package
+- E.g. for python, run `sudo npm i -g pyright`
