@@ -6,17 +6,17 @@ user_pref("browser.bookmarks.max_backups", 0); // No bookmarks backup
 user_pref("browser.cache.disk.enable", false); // Disable disk cache
 user_pref("browser.cache.offline.enable", false); // Disable offline cache
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false); 
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // Disable new tab page widgets 
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
-user_pref("browser.newtabpage.activity-stream.discoverystream.enabled", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
-user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.showSearch", false);
-user_pref("browser.newtabpage.enabled", false); // Disable newtab page
+//user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false); // Disable new tab page widgets 
+//user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
+//user_pref("browser.newtabpage.activity-stream.discoverystream.enabled", false);
+//user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+//user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+// user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+// user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+// user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+// user_pref("browser.newtabpage.activity-stream.telemetry", false);
+// user_pref("browser.newtabpage.activity-stream.showSearch", false);
+//user_pref("browser.newtabpage.enabled", false); // Disable newtab page
 user_pref("browser.newtabpage.activity-stream.default.sites", ""); // Clear new tab activity stream default sites
 user_pref("browser.fixup.alternate.enabled", false); // Disables domain naming reparing/guessing
 user_pref("browser.urlbar.trimURLs", false); // Force display of full url
@@ -29,9 +29,9 @@ user_pref("startup.homepage_welcome_url", ""); // This disables Firefox homepage
 
 // Search Bar Results
 user_pref("browser.search.suggest.enabled", false); // Disable search suggestions from the search bar
-user_pref("browser.urlbar.suggest.searches", false); // Disable search suggestions from url bar
+user_pref("browser.urlbar.suggest.searches", true); // Disable search suggestions from url bar
 user_pref("browser.search.update", false); // Disable search engine changes
-user_pref("browser.urlbar.maxRichResults", 0);
+user_pref("browser.urlbar.maxRichResults", 1);
 user_pref("browser.urlbar.speculativeConnect.enabled", false); // Disable autocomplete URLs
 // user_pref("keyword.enabled", false); Disable search
 user_pref("browser.urlbar.dnsResolveSingleWordsAfterSearch", 0); // Disable autocorrect
@@ -77,9 +77,9 @@ user_pref("media.peerconnection.use_document_iceservers", false); // Other WebRT
 user_pref("media.peerconnection.video.enabled", false); // Other WebRTC settings
 user_pref("media.peerconnection.identity.timeout", 1); // Other WebRTC settings
 
-	//user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
+//user_pref("geo.provider.ms-windows-location", false); // [WINDOWS]
 //user_pref("geo.provider.use_corelocation", false); // [MAC]
-	 user_pref("geo.provider.use_gpsd", false); // [LINUX]
+user_pref("geo.provider.use_gpsd", false); // [LINUX]
 
 user_pref("browser.region.network.url", ""); // [FF78+] Disable region updates
 user_pref("browser.region.update.enabled", false); // [[FF79+] 
@@ -104,7 +104,7 @@ user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); // [DEFAU
 user_pref("browser.ping-centre.telemetry", false);
 
 // Add-ons Behavior
-     user_pref("extensions.allowPrivateBrowsingByDefault", true); // Not sure what this does, but when enabled, prevents temporary container tabs from running.
+user_pref("extensions.allowPrivateBrowsingByDefault", true); // Not sure what this does, but when enabled, prevents temporary container tabs from running.
 user_pref("extensions.blocklist.enabled", false); // Disable blocklist
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("extensions.getAddons.discovery.api_url", "");

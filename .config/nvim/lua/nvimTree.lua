@@ -39,7 +39,7 @@ g.nvim_tree_icons = {
         open = "",
         symlink = "",
         empty = "",
-        empty_open = "",
+        empty_open = "",
         symlink_open = ""
     }
 }

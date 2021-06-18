@@ -71,6 +71,17 @@ super + {_,shift + }{1-9,0}
 alt + {1-9,0}
     bspc node -d '^{1-9,10}' --follow
 
+# Hide window
+alt + h
+    bspc node -g hidden=on
+
+# Unhide previous node
+#alt + s
+#    bspc node $(bspc query -N -n .hidden | tail -n1) -g hidden=off)
+
+alt + shift + h
+    unhide.sh
+
 
 ## PRESELECT
 
@@ -146,7 +157,7 @@ alt + b
 
 # Open rofi launcher
 super + @space
-	rofi -show drun -show-icons
+	rofi -show drun -show-icons -lines 9
 	
 # Toggle keepassxc
 alt + k
@@ -154,31 +165,55 @@ alt + k
     
 # Toggle signal
 super + r; s
-   ~/.scripts/bspwm-toggle-visibility.sh signal signal-desktop
+    ~/.scripts/bspwm-toggle-visibility.sh signal signal-desktop
    
 # Toggle vscodium
-super + r; c
+super + r; e
     ~/.scripts/bspwm-toggle-visibility.sh vscodium codium
+
+# Toggle thunderbird
+super + r; t
+    ~/.scripts/bspwm-toggle-visibility.sh Thunderbird thunderbird
+
+# Toggle calibre
+super + r; c 
+    ~/.scripts/bspwm-toggle-visibility.sh calibre
+    
+# Toggle standard notes
+super + r; n
+    ~/.scripts/bspwm-toggle-visibility.sh "standard notes" standard-notes
+
+# Toggle joplin
+super + r; j
+    ~/.scripts/bspwm-toggle-visibility.sh joplin
 
 
 ## SCRIPTS
 
 # Generate password
 super + r ; g ; p
-    tr -dc "a-zA-Z0-9_#@.-" < /dev/urandom | head -c 20 | xclip -selection clipboard
+    #tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | head -c 30 | xclip -selection clipboard
+# works as well
+    
+    < /dev/urandom tr -cd "[:print:]" | tr -d ' \\/\`\|' | head -c 32; xclip -selection clipboard
+
+super + r ; w
+    ~/.scripts/better-watch.sh
 
 
 ## CONTROL KEYS
 
 # Adjust brightness
 XF86MonBrightness{Up,Down}
-	brightnessctl s 50{+,-}
+    brightnessctl s 100{+,-}
 
 # Adjust volume
 XF86Audio{Raise,Lower}Volume
-	amixer -c 1 set Master 3{+,-}
+    amixer -c 1 set Master 3{+,-}
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+    pactl set-sink-mute 0 toggle
+XF86Search
+    locate.sh
 
 # Screenshot whole window
 Print
@@ -188,10 +223,11 @@ Print
 shift + Print
     maim -i $(xdotool getactivewindow) ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png
 
-# Select section and copy to clipboard
+# Screenshot and copy to clipboard
 alt + Print
-    maim -s -u | xclip -selection clipboard -t image/png -i
+    maim -u | xclip -selection clipboard -t image/png -i
     
-# Select section, save screenshot and copy to clipboard
+# Select section and copy to clipboard
 alt + shift + Print
-    maim -s /tmp/screenshot.png ; cat /tmp/screenshot.png | xclip -selection clipboard -t image/png
+    maim -s -u | xclip -selection clip board -t image/png -i
+   # maim -s /tmp/screenshot.png ; cat /tmp/screenshot.png | xclip -selection clipboard -t image/png

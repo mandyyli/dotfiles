@@ -62,6 +62,7 @@ URxvt.urlLauncher: firefox
 URxvt.matcher.button: 2
 
 URxvt*background:   [50]#1D1D1D
+urxvt*depth: 32
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #867e36
 URxvt.colorUL:      #535C5C

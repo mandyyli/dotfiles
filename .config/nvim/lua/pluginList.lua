@@ -18,12 +18,15 @@ return require("packer").startup(
         use "sbdchd/neoformat"
         use "nvim-lua/plenary.nvim"
         use "kabouzeid/nvim-lspinstall"
-
+        
         use "lewis6991/gitsigns.nvim"
         use "akinsho/nvim-bufferline.lua"
         use "glepnir/galaxyline.nvim"
         use "windwp/nvim-autopairs"
         use "alvan/vim-closetag"
+        
+        -- Comment
+        use "terrortylor/nvim-comment"
 
         -- snippet support
         use "hrsh7th/vim-vsnip"
@@ -38,6 +41,7 @@ return require("packer").startup(
         use "nvim-lua/popup.nvim"
 
         -- misc
+        use "glepnir/dashboard-nvim"
         use "tweekmonster/startuptime.vim"
         use "907th/vim-auto-save"
         use "karb94/neoscroll.nvim"

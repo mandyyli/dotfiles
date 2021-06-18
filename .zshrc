@@ -2,6 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.scripts:$HOME/.local/bin:$PATH
 
+export LOCATE_PATH="$HOME/.locate.db"
+
 PROMPT="%{$fg[red]%} »  %{$reset_color%}"
 # RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
 
@@ -134,7 +136,7 @@ conf() {
 	case $1 in
 		bspwm)		vim ~/.config/bspwm/bspwmrc ;;
 		sxhkd)		vim ~/.config/sxhkd/sxhkdrc ;;
-		polybar)	vim ~/.config/polybar/config ;;
+		polybar)	vim ~/.config/polybar/config.ini ;;
 		picom)		vim ~/.config/picom/picom.conf ;;
 		conky)		vim ~/conky.conf ;;
 		mpd)		vim ~/.mpd/mpd.conf ;;
@@ -163,6 +165,7 @@ alias ...='cd ../..'
 alias ll='ls -alF'
 alias vi='vim'
 alias xup='xrdb ~/.Xresources'
+alias xev='xev.sh'
 
 #alias mkdir and cd
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }

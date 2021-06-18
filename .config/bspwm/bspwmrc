@@ -2,11 +2,12 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 #compton –config /home/localhost/.config/compton/.compton.conf -b &
-feh --bg-scale ~/Pictures/wallpaper.jpeg &
+feh --bg-scale ~/Pictures/wallpapers/grey.png &
 ~/.scripts/kbmap.sh &
 picom &
 "$HOME/.config/polybar/launch.sh"
 dunst &
+redshift -O 3200 &
 
 #bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -24,8 +25,9 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Firefox desktop='^2'
+#bspc rule -a Firefox desktop='^2'
 bspc rule -a Zathura state=tiled
 #bspc rule -a Kupfer.py focus=on
 
 # panel &
+~/.scripts/dynamic_window.sh
