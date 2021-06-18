@@ -33,8 +33,8 @@ My dotfiles for a Fedora + BSPWM setup on my Thinkpad T440p
 
 ## Setup
 - Install Gruvbox theme and fonts
-- 
-
+- Run install.sh
+- Copy config files
 
 ## Configuring Nvim
 Requires neovim nightly & Packer plugin manager
