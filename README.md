@@ -14,7 +14,7 @@ My dotfiles for a Fedora + BSPWM setup on my Thinkpad T440p
 - `zathura`: PDF reader
 - `ranger`: File explorer
 
-
+## Other
 - `maim`: Screenshot tool
 - `picom`: Compositor (ibhagwan's fork)
 - `ncmpcpp`: music client
