@@ -117,8 +117,8 @@ super + alt + shift + {h,j,k,l}
 #	bspc node -v {-20 0,0 20,0 -20,20 0}
 	
 # Toggle tile
-super + {_,shift +} t
-	bspc window -t {floating,fullscreen}
+#super + {_,shift +} t
+#	bspc window -t {floating,fullscreen}
 	
 
 ## RESIZE NODES
@@ -162,7 +162,11 @@ super + @space
 # Toggle keepassxc
 alt + k
     ~/.scripts/bspwm-toggle-visibility.sh keepassxc
-    
+
+# Toggle thunar
+alt + f
+    ~/.scripts/bspwm-toggle-visibility.sh Thunar
+
 # Toggle signal
 super + r; s
     ~/.scripts/bspwm-toggle-visibility.sh signal signal-desktop
@@ -187,15 +191,15 @@ super + r; n
 super + r; j
     ~/.scripts/bspwm-toggle-visibility.sh joplin
 
+# Toggle discord
+super + r; d
+    ~/.scripts/bspwm-toggle-visibility.sh discord
 
 ## SCRIPTS
 
 # Generate password
-super + r ; g ; p
-    #tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' < /dev/urandom | head -c 30 | xclip -selection clipboard
-# works as well
-    
-    < /dev/urandom tr -cd "[:print:]" | tr -d ' \\/\`\|' | head -c 32; xclip -selection clipboard
+alt + g ; p
+    < /dev/urandom tr -cd "[:print:]" | tr -d ' \\/\`\|' | head -c 31 | xclip -selection clipboard
 
 super + r ; w
     ~/.scripts/better-watch.sh
