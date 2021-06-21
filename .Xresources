@@ -1,5 +1,5 @@
 ! all
-*.background: #1f1f1f
+!*.background: #11121D
 *.foreground: #c0b18b
 *.cursorColor:#c5c8c6
 
@@ -50,7 +50,8 @@
 URxvt*buffered: true
 URxvt*cursorBlink: true
 URxvt*underlineColor: #535C5C
-URxvt*font:  xft:terminus:size=12
+!!!!URxvt*font:  xft:terminus:size=12
+URxvt*font:  xft:FiraCode Nerd Font Mono:style=Medium,Regular:size=12
 URxvt*borderless: 1
 URxvt*scrollBar: false
 URxvt*loginShell: true
@@ -61,8 +62,9 @@ URxvt.perl-ext-common: default,matcher
 URxvt.urlLauncher: firefox
 URxvt.matcher.button: 2
 
-URxvt*background:   [50]#1D1D1D
+!URxvt*background:  #11121D
 urxvt*depth: 32
+URxvt*background:   #000
 URxvt.colorIT:      #87af5f
 URxvt.colorBD:      #867e36
 URxvt.colorUL:      #535C5C
@@ -83,5 +85,4 @@ urxvt.perl-ext-common: default,resize-font
 URxvt.keysym.C-j:     resize-font:smaller 
 URxvt.keysym.C-k:      resize-font:bigger 
 URxvt.keysym.C-=:     resize-font:reset
-
 
