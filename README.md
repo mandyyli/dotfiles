@@ -16,6 +16,7 @@ My dotfiles for a Fedora + BSPWM setup on my Thinkpad T440p
 
 ## Other
 - `maim`: Screenshot tool
+- `yad`: GTK+ dialog boxes
 - `picom`: Compositor (ibhagwan's fork)
 - `ncmpcpp`: music client
 - `thunderbird`: Email client
