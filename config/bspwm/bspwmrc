@@ -30,6 +30,6 @@ bspc rule -a KeePassXC state=floating center=true focus=on rectangle=1000x700
 ngle=1100x780+0+0
 bspc rule -a Thunar state=floating center=true
 bspc rule -a "MEGAsync" state=floating center=true follow=on
-
+bspc rule -a "Yad" state=floating
 
 # panel &

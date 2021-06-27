@@ -4,6 +4,9 @@
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# Lock screen
+ctrl + alt + l
+    i3lock-blur.sh
 
 ## BSPWM HOTKEYS
 
@@ -166,6 +169,10 @@ alt + k
 # Toggle thunar
 alt + f
     ~/.scripts/bspwm-toggle-visibility.sh Thunar
+
+# Toggle ticktick
+alt + t
+    bspwm-toggle-visibility.sh tickticktodolistchecklistandtaskmanagerappforandroidiphoneandweb-nativefier-ea9180 ticktick --take-first
 
 # Toggle signal
 super + r; s
